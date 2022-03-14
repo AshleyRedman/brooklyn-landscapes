@@ -1,0 +1,67 @@
+name: NextJS
+on: [push]
+
+jobs:
+    prettier:
+        timeout-minutes: 10
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
+
+            - name: Setup Node 14.x Environment
+              uses: actions/setup-node@v2
+              with:
+                  node-version: "14.x"
+
+            - name: Install dependencies
+              working-directory: ./
+              run: npm ci
+
+            - name: Run prettier check
+              working-directory: ./
+              run: npm run format:check
+
+    eslint:
+        timeout-minutes: 10
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
+
+            - name: Setup Node 14.x Environment
+              uses: actions/setup-node@v2
+              with:
+                  node-version: "14.x"
+
+            - name: Install dependencies
+              working-directory: ./
+              run: npm ci
+
+            - name: Run lint
+              working-directory: ./
+              run: npm run lint
+
+    lighthouseci:
+        timeout-minutes: 10
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
+
+            - name: Setup Node 14.x Environment
+              uses: actions/setup-node@v2
+              with:
+                  node-version: "14.x"
+
+            - name: Install dependencies
+              working-directory: ./ui
+              run: npm ci && npm install -g @lhci/cli@0.8.x
+
+            - name: Run build
+              working-directory: ./ui
+              run: npm run build
+
+            - name: Run lighthouseCI
+              working-directory: ./ui
+              run: lhci autorun
