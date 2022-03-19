@@ -87,7 +87,7 @@ const Nav: FC = (): ReactElement => (
 );
 
 const Header: FC = (): ReactElement => (
-    <header className="border-b-2 border-b-green-400 py-4 px-4">
+    <header className="w-full border-b-2 border-b-green-400 bg-white py-4 px-4 lg:fixed lg:top-px lg:z-50">
         <div className="container mx-auto flex items-center justify-between">
             <CustomLink href={urls.home.path} label="Brooklyn Landscapes" className="w-48 md:w-60">
                 <Image src={logo} alt="Brooklyn Landscapes logo" placeholder="blur" />

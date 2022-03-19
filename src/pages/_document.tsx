@@ -36,7 +36,7 @@ const AppDocument = () => {
                 />
                 <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
             </Head>
-            <body className="bg-white font-inter">
+            <body className="overflow-x-hidden bg-white font-inter">
                 <Main />
                 <NextScript />
             </body>

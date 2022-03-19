@@ -1,8 +1,9 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-
-import Default from '../layouts/Default';
+import heroBG from '../../public/bg-one.jpg';
+import Hero from '../components/Hero';
 import urls from '../config/urls';
+import Default from '../layouts/Default';
 
 const Home: NextPage = () => {
     return (
@@ -14,7 +15,15 @@ const Home: NextPage = () => {
                 <link rel="canonical" href={urls.home.canonical} />
             </Head>
             <Default>
-                <p>hello</p>
+                <Hero
+                    title="Commercial landscaping"
+                    preTitle="Specialising in"
+                    text="Brooklyn Landscapes is a commercial landscaping company established for over twenty years, providing out clients with quality work and great value"
+                    buttonText="Get a quote"
+                    buttonLink={urls.contact.path}
+                    bgImg={heroBG}
+                    flareImg={heroBG}
+                />
             </Default>
         </>
     );
