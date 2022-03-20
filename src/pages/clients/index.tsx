@@ -1,9 +1,10 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import { ReactElement } from 'react';
 import urls from '../../config/urls';
 import Default from '../../layouts/Default';
 
-const About: NextPage = () => (
+const Clients: NextPage = (): ReactElement => (
     <>
         <Head>
             <title>{urls.about.title}</title>
@@ -17,4 +18,4 @@ const About: NextPage = () => (
     </>
 );
 
-export default About;
+export default Clients;
