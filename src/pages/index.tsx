@@ -1,16 +1,16 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import heroImage from '../../public/bg-one.jpg';
+import designImage from '../../public/design.jpg';
 import grassImage from '../../public/grass.jpeg';
+import mowingImage from '../../public/mowing.jpg';
+import planningImage from '../../public/planning.jpg';
+import rollingImage from '../../public/rolling.jpg';
+import Accreditations from '../components/Accreditations';
 import Hero from '../components/Hero';
 import ServiceCard from '../components/ServiceCard';
 import urls from '../config/urls';
 import Default from '../layouts/Default';
-
-import planningImage from '../../public/planning.jpg';
-import rollingImage from '../../public/rolling.jpg';
-import mowingImage from '../../public/mowing.jpg';
-import designImage from '../../public/design.jpg';
 
 const Home: NextPage = () => (
     <>
@@ -28,11 +28,11 @@ const Home: NextPage = () => (
                 buttonText="Get a quote"
                 buttonLink={urls.contact.path}
                 bgImg={grassImage}
-                flareImg={heroImage}
+                flareImg={planningImage}
                 className="bg-bottom"
             />
 
-            <section className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4">
+            <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
                 <ServiceCard
                     img={planningImage}
                     title="Planning"
@@ -54,7 +54,9 @@ const Home: NextPage = () => (
                 />
             </section>
 
-            <section className="py-48">hello</section>
+            <section className="container mx-auto px-8 ">
+                <Accreditations />
+            </section>
         </Default>
     </>
 );

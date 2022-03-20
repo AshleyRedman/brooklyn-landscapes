@@ -7,9 +7,9 @@ import CustomLink from '../Link';
 const Widget: FC = (): ReactElement => (
     <motion.div
         initial={{ opacity: 0, bottom: 0 }}
-        animate={{ opacity: 1, bottom: '5%' }}
+        animate={{ opacity: 1, bottom: '3%' }}
         transition={{ delay: 1.5, stiffness: 75 }}
-        className="fixed right-16 rounded-full bg-green-500"
+        className="fixed right-6 z-50 rounded-full bg-green-500"
     >
         <CustomLink href={urls.contact.path} label="Get in touch" className="block !rounded-full p-3">
             <PhoneIcon className="h-6 w-6 text-white" />

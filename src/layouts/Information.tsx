@@ -6,12 +6,14 @@ type Props = {
     children: ReactChild | ReactChildren | ReactElement[];
 };
 
-const Default: FC<Props> = (props): ReactElement => (
+const Information: FC<Props> = (props): ReactElement => (
     <>
         <Header />
-        <main className="lg:mt-24">{props.children}</main>
+        <main className="lg:mt-24">
+            <section className="container mx-auto px-8 py-12 lg:py-24 lg:px-48 2xl:px-60">{props.children}</section>
+        </main>
         <Footer />
     </>
 );
 
-export default Default;
+export default Information;

@@ -64,7 +64,7 @@ const Nav: FC = (): ReactElement => (
             >
                 <Menu.Items
                     as="nav"
-                    className="absolute right-0 mt-2 w-max origin-top-right rounded bg-white shadow-xl outline-none"
+                    className="absolute right-0 z-50 mt-2 w-max origin-top-right rounded border border-green-400 bg-white shadow-xl outline-none"
                 >
                     <ul className="py-1 px-4 text-right">
                         <Menu.Item>

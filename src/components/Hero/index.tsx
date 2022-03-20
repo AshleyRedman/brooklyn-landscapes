@@ -16,10 +16,9 @@ const Flare: FC<FlareProps> = (props) => (
         <div className="absolute top-1/2 right-0 grid aspect-square h-1/2 -translate-y-1/2 rotate-45 grid-cols-2 overflow-hidden border-4 border-white lg:h-full lg:translate-x-2/3 lg:-translate-y-[45%] xl:translate-x-1/3">
             <div className="overflow-hidden border-4 border-white bg-transparent" />
             <div className="overflow-hidden border-4 border-white bg-transparent" />
-            <div
-                style={{ backgroundImage: `url(${props.img.src})` }}
-                className="overflow-hidden border-4 border-white p-16"
-            />
+            <div className="relative overflow-hidden border-4 border-white p-16">
+                <div style={{ backgroundImage: `url(${props.img.src})` }} className="absolute -inset-28 -rotate-45" />
+            </div>
             <div className="grid grid-cols-16 overflow-hidden border-4 border-white bg-transparent">
                 {new Array(16).fill(0).map((_, i) => (
                     <span key={i} className="h-full w-px bg-white" />
@@ -45,7 +44,7 @@ const Hero: FC<HeroProps> = (props): ReactElement => (
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         style={{ backgroundImage: `url(${props.bgImg.src})` }}
-        className={`relative bg-cover bg-center bg-no-repeat bg-origin-padding py-16 first-line:overflow-hidden lg:h-full lg:py-48 2xl:py-[15%] ${
+        className={`relative bg-cover bg-center bg-no-repeat bg-origin-padding pt-8 pb-16 first-line:overflow-hidden lg:h-full lg:py-48 2xl:py-[15%] ${
             props.className ?? ''
         }`}
     >
