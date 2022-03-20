@@ -25,7 +25,7 @@ const NavItem: FC<NavItemProps> = (props): ReactElement => {
                 className={`flex ${props.className ? props.className : ''}`}
             >
                 <span
-                    className={`block border-b-2 px-1 pt-3 pb-2 font-archivo text-xs uppercase leading-none tracking-widest text-gray-600 ${
+                    className={`block border-b-2 px-1 pt-3 pb-2 text-xs uppercase leading-none tracking-widest text-gray-600 ${
                         router.pathname === props.href ? 'border-b-green-500' : 'border-b-transparent'
                     }`}
                 >
@@ -87,7 +87,7 @@ const Nav: FC = (): ReactElement => (
 );
 
 const Header: FC = (): ReactElement => (
-    <header className="w-full border-b-2 border-b-green-400 bg-white py-4 px-4 lg:fixed lg:top-px lg:z-50">
+    <header className="w-full border-b-2 border-b-green-400 bg-white py-4 px-4 lg:fixed lg:top-0 lg:z-50">
         <div className="container mx-auto flex items-center justify-between">
             <CustomLink href={urls.home.path} label="Brooklyn Landscapes" className="w-48 md:w-60">
                 <Image src={logo} alt="Brooklyn Landscapes logo" placeholder="blur" />

@@ -2,7 +2,7 @@ import { Html, Head, Main, NextScript } from 'next/document';
 
 const AppDocument = () => {
     return (
-        <Html lang="en">
+        <Html lang="en" className="bg-green-500">
             <Head>
                 <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -34,9 +34,8 @@ const AppDocument = () => {
                     href="https://fonts.googleapis.com/css2?family=Archivo:wght@100;200;300;400;500;600;700;800;900&display=swap"
                     rel="stylesheet"
                 />
-                <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
             </Head>
-            <body className="overflow-x-hidden bg-white font-inter">
+            <body className="overflow-x-hidden bg-gradient-to-b from-gray-300 to-white font-archivo">
                 <Main />
                 <NextScript />
             </body>
